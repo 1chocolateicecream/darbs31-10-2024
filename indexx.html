@@ -4,6 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      form {
+        width: 600px;
+        margin: auto;
+        border: 1px solid black;
+        padding: 20px;
+      }
+
+      input,
+      select {
+        display: block;
+        width: 100%;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <form action="#">
+      <div>
+        <label for="name">Name: (3-15 symbols)</label><br />
+        <input type="text" id="name" minlength="3" maxlength="15" /><br /><br />
+      </div>
+
+      <div>
+        <label for="theme">Tēma:</label>
+        <select id="theme">
+          <option value="">--Please choose an option--</option>
+          <option value="tehniskais-atbalsts">Tehniskais atbalsts</option>
+          <option value="piedavajumi">Piedāvājumi</option>
+          <option value="visparigi-jautajumi">Vispārīgi jautājumi</option>
+        </select>
+      </div>
+      <br /><br />
+
+      <div>
+        <label for="agreement">Piekritat saņemt jaunumus?</label><br /><br />
+        <input type="checkbox" id="agreement" />
+      </div>
+      <br />
+
+      <input type="button" value="submit" />
+    </form>
+  </body>
 </html>
